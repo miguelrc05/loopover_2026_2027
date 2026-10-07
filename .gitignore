@@ -4,6 +4,9 @@
 *.class
 *.log
 
+# Documentación local del SDD
+/doc/
+
 # Archivos temporales del sistema operativo
 .DS_Store
 Thumbs.db
