@@ -4,7 +4,7 @@ Implementación en Java de un buscador para el puzzle Loopover 4×4. El proyecto
 
 ## Estado del proyecto
 
-> **En desarrollo.** El código contiene esqueletos de implementación para el estado, la búsqueda y las heurísticas. Por tanto, los comandos de resolución todavía no deben considerarse funcionales. La especificación de las reglas —incluida la diferencia con el Loopover estándar— está en [`doc/02-especificacion-del-juego.md`](doc/02-especificacion-del-juego.md).
+> **En desarrollo.** El código contiene esqueletos de implementación para el estado, la búsqueda y las heurísticas. Por tanto, los comandos de resolución todavía no deben considerarse funcionales.
 
 ## Requisitos
 
@@ -46,7 +46,7 @@ Una acción se escribe como `fila columna signo`, con índices de fila y columna
 - `-`: desplaza la fila a la izquierda y luego la columna hacia arriba.
 - Ambos desplazamientos son circulares: las fichas que salen por un extremo reaparecen por el otro.
 
-La acción acoplada completa cuenta como un movimiento de coste 1 en el modelo del proyecto. No es la misma métrica que la del Loopover estándar, donde se desplaza una sola fila o una sola columna por movimiento. Véase la [especificación detallada](doc/02-especificacion-del-juego.md).
+La acción acoplada completa cuenta como un movimiento de coste 1 en el modelo del proyecto. No es la misma métrica que la del Loopover estándar, donde se desplaza una sola fila o una sola columna por movimiento.
 
 ## Interfaz prevista
 
@@ -68,5 +68,4 @@ java -jar target/loopover.jar solve -s 00010203040506070809101112131415
 
 ## Documentación
 
-- [Índice de documentación](doc/README.md)
-- [Especificación profunda del juego y sus reglas](doc/02-especificacion-del-juego.md)
+La documentación detallada de planificación se conserva localmente en `doc/` y se excluye del repositorio mediante `.gitignore`.
