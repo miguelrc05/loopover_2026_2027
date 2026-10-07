@@ -81,8 +81,7 @@ public final class Estado {
             throw new IllegalArgumentException("La representacion no puede ser nula");
         }
         if (representacion.length() != NUM_CASILLAS * 2) {
-            throw new IllegalArgumentException(
-                    "La representacion debe tener 32 digitos: " + representacion.length());
+            throw new IllegalArgumentException("La representacion debe tener 32 digitos: " + representacion.length());
         }
         int[] fichas = new int[NUM_CASILLAS];
         for (int i = 0; i < NUM_CASILLAS; i++) {
