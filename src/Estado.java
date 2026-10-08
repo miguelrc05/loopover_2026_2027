@@ -273,8 +273,7 @@ public final class Estado {
         for (int casilla = 0; casilla < NUM_CASILLAS; casilla++) {
             int ficha = fichas[casilla];
             if (ficha < 0 || ficha >= NUM_CASILLAS) {
-                throw new IllegalArgumentException(
-                        "La ficha de la casilla " + casilla + " debe estar entre 0 y 15: " + ficha);
+                throw new IllegalArgumentException("La ficha de la casilla " + casilla + " debe estar entre 0 y 15: " + ficha);
             }
 
             int mascaraFicha = 1 << ficha;
@@ -355,12 +354,9 @@ public final class Estado {
             rotada = ((extraida << BITS_POR_FILA_TABLERO) & mascaraColumna)
                     | ((extraida >>> (BITS_POR_FILA_TABLERO * (LADO - 1))) & mascaraRetorno);
         } else {
-            long mascaraSuperior = 0xF000000000000000L
-                    >>> (BITS_POR_FILA_TABLERO - BITS_POR_CASILLA - desplazamiento);
-            rotada = ((extraida >>> BITS_POR_FILA_TABLERO) & mascaraColumna)
-                    | ((extraida << (BITS_POR_FILA_TABLERO * (LADO - 1))) & mascaraSuperior);
+            long mascaraSuperior = 0xF000000000000000L >>> (BITS_POR_FILA_TABLERO - BITS_POR_CASILLA - desplazamiento);
+            rotada = ((extraida >>> BITS_POR_FILA_TABLERO) & mascaraColumna) | ((extraida << (BITS_POR_FILA_TABLERO * (LADO - 1))) & mascaraSuperior);
         }
-
         return (bitboard & ~mascaraColumna) | rotada;
     }
 
@@ -372,8 +368,7 @@ public final class Estado {
 
     private static void validarAccion(int accion) {
         if (accion < 0 || accion > MASCARA_CODIGO_ACCION) {
-            throw new IllegalArgumentException(
-                    "La accion debe estar entre 0 y " + MASCARA_CODIGO_ACCION + ": " + accion);
+            throw new IllegalArgumentException("La accion debe estar entre 0 y " + MASCARA_CODIGO_ACCION + ": " + accion);
         }
     }
 
