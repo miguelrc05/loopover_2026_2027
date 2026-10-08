@@ -12,26 +12,6 @@
 Thumbs.db
 desktop.ini
 
-# Metadatos, cachés y estado local de herramientas de IA
-.ai/
-.llm/
-.claude/
-.cursor/
-.opencode/
-.continue/
-.windsurf/
-.gemini/
-.copilot/
-.aider*
-AGENTS.md
-CLAUDE.md
-GEMINI.md
-*.prompt.md
-*.transcript.md
-*.session.json
-.github/copilot-instructions.md
-.github/instructions/
-
 # Metadatos y cachés de IDE; se conserva .vscode/settings.json
 .idea/
 *.iml

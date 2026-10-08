@@ -128,8 +128,7 @@ public final class Estado {
     /** Devuelve la ficha en la posicion (fila, columna). */
     public int ficha(int fila, int columna) {
         if (fila < 0 || fila >= LADO || columna < 0 || columna >= LADO) {
-            throw new IllegalArgumentException(
-                    "Posicion fuera de rango: fila=" + fila + ", columna=" + columna);
+            throw new IllegalArgumentException("Posicion fuera de rango: fila=" + fila + ", columna=" + columna);
         }
         return ficha(fila * LADO + columna);
     }
@@ -201,8 +200,7 @@ public final class Estado {
             throw new IllegalArgumentException("La accion no puede ser nula");
         }
         if (representacion.length() != 3) {
-            throw new IllegalArgumentException(
-                    "La accion debe tener el formato rc+ o rc-: " + representacion);
+            throw new IllegalArgumentException("La accion debe tener el formato rc+ o rc-: " + representacion);
         }
 
         char caracterFila = representacion.charAt(0);
